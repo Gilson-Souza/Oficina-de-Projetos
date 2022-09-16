@@ -7,13 +7,16 @@ public class EnviarEmail implements IEnviar {
 
 
     @Override
-    public void sacar(Cliente cliente, double valor) {
-        double saque = 0;
+      public void sacar(Cliente cliente, double valor) {
+        double contaAtualizada = 0;
         cliente.valorInicial();
-        saque = cliente.getConta().getSaldoCorrente() - valor;
+        contaAtualizada = cliente.getConta().getSaldoCorrente() - valor;
+        cliente.getConta().setSaldoCorrente(contaAtualizada);
         cliente.valorSacado();
         cliente.contaAtualizada();
         disparar(cliente);
+
+    }
 
     }
     @Override

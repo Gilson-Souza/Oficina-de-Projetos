@@ -4,7 +4,7 @@ public class Conta {
 
     private String numero;
 
-    private int saldoCorrente;
+    private double saldoCorrente;
 
 
     public Conta(String numero, int saldoCorrente) {
@@ -21,11 +21,11 @@ public class Conta {
         this.numero = numero;
     }
 
-    public int getSaldoCorrente() {
+    public double getSaldoCorrente() {
         return saldoCorrente;
     }
 
-    public void setSaldoCorrente(int saldoCorrente) {
+    public void setSaldoCorrente(double saldoCorrente) {
         this.saldoCorrente = saldoCorrente;
     }
 

@@ -14,16 +14,18 @@ public class Cliente {
         this.email = "gilsonpro10@gmail.com";
     }
 
-    public double valorSacado(){
-        double valorSacado = 0;
-        valorSacado = valorInicial() - conta.getSaldoCorrente();
-        return valorSacado;
-    }
     public double valorInicial(){
         double valorInicial = 0;
         valorInicial  = conta.getSaldoCorrente();
         return valorInicial;
     }
+    
+    public double valorSacado(){
+        double valorSacado = 0;
+        valorSacado = valorInicial() - conta.getSaldoCorrente();
+        return valorSacado;
+    }
+  
     public double contaAtualizada(){
         double contaAtualizada = 0;
         contaAtualizada = conta.getSaldoCorrente();
