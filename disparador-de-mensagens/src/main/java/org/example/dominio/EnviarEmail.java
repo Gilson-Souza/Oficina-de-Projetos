@@ -1,26 +1,17 @@
 package org.example.dominio;
 
-import org.apache.commons.mail.DefaultAuthenticator;
-import org.apache.commons.mail.SimpleEmail;
+
 
 public class EnviarEmail implements IEnviar {
 
 
     @Override
-      public void sacar(Cliente cliente, double valor) {
-        double contaAtualizada = 0;
-        cliente.valorInicial();
-        contaAtualizada = cliente.getConta().getSaldoCorrente() - valor;
-        cliente.getConta().setSaldoCorrente(contaAtualizada);
-        cliente.valorSacado();
-        cliente.contaAtualizada();
-        disparar(cliente);
+    public void disparar(Conta conta) {
 
-    }
-
-    }
-    @Override
-    public void disparar(Cliente cliente) {
+        System.out.println("Email enviado para o destino");
+        System.out.println("O atual valor na sua conta é de:" + conta.contaAtualizada());
+        System.out.println();
+    /*
 
         String meuEmail = "gilsonpro10@gmail.com";
         String minhaSenha = "Itachi10%22*";
@@ -34,9 +25,9 @@ public class EnviarEmail implements IEnviar {
         try {
             email.setFrom(meuEmail);
             email.setSubject("Aviso de acao bancaria");
-            email.setMsg("Foi realizado um saque no valor de: " + cliente.valorSacado() +
-                         "O valor anterior ao saque era de:  " + cliente.valorInicial() +
-                         "O atual valor permacente na sua conta é de:" + cliente.contaAtualizada()
+            email.setMsg("Foi realizado um saque no valor de: " + conta.valorSacado() +
+                         "O valor anterior ao saque era de:  " + conta.valorInicial() +
+                         "O atual valor permacente na sua conta é de:" + conta.contaAtualizada()
                          );
             email.addTo(cliente.getEmail());
             email.send();
@@ -44,10 +35,8 @@ public class EnviarEmail implements IEnviar {
         } catch (Exception e){
             e.printStackTrace();
         }
-    }
-    @Override
-    public void registrar(EnviarEmail acao) {
-    }
 
+     */
+    }
 
 }

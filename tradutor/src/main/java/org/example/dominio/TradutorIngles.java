@@ -3,7 +3,6 @@ package org.example.dominio;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Set;
 
 @Getter
 @Setter
@@ -11,23 +10,12 @@ import java.util.Set;
 public class TradutorIngles implements ITraducao{
 
 
-    private Set<String> palavras;
+    private String[] palavrasParaTraduzir = new String[]{};
+    private String[] palavrasTraduzida = new String[]{};
 
-
-    @Override
-    public void traduzir(String texto) {
-
-        String[] textoSeparado = texto.split("[?,!|\s]");
-        for (String aux : textoSeparado) {
-            System.out.println(aux);
-        }
-        for (int i = 0; i < palavras.size(); i++) {
-            if (!getPalavras().equals(textoSeparado)) {
-
-            } else {
-
-            }
-        }
+    public TradutorIngles() {
+        this.palavrasParaTraduzir = new String[]{};
+        this.palavrasTraduzida = new String[]{};
     }
 }
 

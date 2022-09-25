@@ -6,32 +6,25 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Traducao implements ITraducao{
+public class Traducao {
 
-    private TradutorEspanhol tradutorEspanhol;
-    private TradutorIngles tradutorIngles;
-    private TradutorItaliano tradutorItaliano;
+    private ITraducao traducao;
 
     public void traduzir(String text) {
-        String[] textoSeparado = text.split("[?,!|\s]");
-        for (String aux: textoSeparado) {
-            System.out.println(aux);
+        String[] textoSeparado = text.split("[(?,!)\s]");
+        for (int i = 0; i < traducao.getPalavrasParaTraduzir().length; i++) {
+            if (traducao.getPalavrasParaTraduzir()[i].equals(textoSeparado[i])){
+                System.out.println("Achei");
+            }else{
+                System.out.println("Não achei");
+            }
+
         }
 
     }
 
 
-    public void addTradutor(TradutorItaliano tradutorItaliano) {
-
+    public void addTradutor(ITraducao tradutor) {
     }
-    public void addTradutor(TradutorEspanhol tradutorEspanhol) {
-
-    }
-    public void addTradutor(TradutorIngles tradutorIngles) {
-
-    }
-
-
-
 
 }

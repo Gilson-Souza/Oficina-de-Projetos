@@ -1,6 +1,4 @@
-import org.example.dominio.Cliente;
-import org.example.dominio.EnviarEmail;
-import org.example.dominio.IEnviar;
+import org.example.dominio.*;
 
 public class Principal {
 
@@ -9,9 +7,19 @@ public class Principal {
 
         //Conta conta = new Conta("245006-8", 2500);
         Cliente cliente = new Cliente("Gilson C Souza", "947799976");
+        Conta conta = new Conta("12345-1", 2500, cliente);
         IEnviar enviarEmail = new EnviarEmail();
+        IEnviar enviarWhats = new EnviarWaths();
+        IEnviar enviarSms = new EnviarSms();
 
-        enviarEmail.sacar(cliente,500);
+        conta.sacar(500);
+        conta.sacar(250.50);
+        conta.sacar(5);
+        conta.sacar(32.60);
+
+        enviarEmail.disparar(conta);
+        enviarWhats.disparar(conta);
+        enviarSms.disparar(conta);
 
     }
 

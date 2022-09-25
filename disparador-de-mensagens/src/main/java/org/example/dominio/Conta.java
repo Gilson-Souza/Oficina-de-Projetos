@@ -6,12 +6,49 @@ public class Conta {
 
     private double saldoCorrente;
 
+    private Cliente cliente;
 
-    public Conta(String numero, int saldoCorrente) {
+    private IEnviar enviar;
+
+
+
+
+    public Conta(String numero, int saldoCorrente, Cliente cliente) {
         this.numero = numero;
         this.saldoCorrente = saldoCorrente;
+        this.enviar = enviar;
 
     }
+    public double valorInicial(){
+        double valorInicial = 0;
+        valorInicial  = getSaldoCorrente();
+        return valorInicial;
+    }
+
+    public double valorSacado(){
+        double valorSacado = 0;
+        valorSacado = valorInicial() - getSaldoCorrente();
+        return valorSacado;
+    }
+
+    public double contaAtualizada(){
+        double contaAtualizada = 0;
+        contaAtualizada = getSaldoCorrente();
+        return contaAtualizada;
+    }
+
+    public void sacar(double valor) {
+        double contaAtualizada = 0;
+        valorInicial();
+        contaAtualizada = getSaldoCorrente() - valor;
+        setSaldoCorrente(contaAtualizada);
+        valorSacado();
+        contaAtualizada();
+
+    }
+
+
+
 
     public String getNumero() {
         return numero;
@@ -29,5 +66,19 @@ public class Conta {
         this.saldoCorrente = saldoCorrente;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
 
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public IEnviar getEnviar() {
+        return enviar;
+    }
+
+    public void setEnviar(IEnviar enviar) {
+        this.enviar = enviar;
+    }
 }
