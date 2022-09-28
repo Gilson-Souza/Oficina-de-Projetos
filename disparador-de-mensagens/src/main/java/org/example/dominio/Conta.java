@@ -8,14 +8,6 @@ public class Conta {
 
     private double ValorIncial;
 
-    public double getValorIncial() {
-        return ValorIncial;
-    }
-
-    public void setValorIncial(double valorIncial) {
-        ValorIncial = valorIncial;
-    }
-
     private Cliente cliente;
 
     private IEnviar enviar;
@@ -29,6 +21,7 @@ public class Conta {
         this.enviar = enviar;
 
     }
+
     public double valorInicial(){
         double valorInicial = 0;
         valorInicial  = getSaldoCorrente();
@@ -40,7 +33,6 @@ public class Conta {
         valorSacado = getValorIncial() - getSaldoCorrente();
         return valorSacado;
     }
-
     public double contaAtualizada(){
         double contaAtualizada = 0;
         contaAtualizada = getSaldoCorrente();
@@ -57,8 +49,9 @@ public class Conta {
 
     }
 
+    public double getValorIncial() {return ValorIncial;}
 
-
+    public void setValorIncial(double valorIncial) {ValorIncial = valorIncial;}
 
     public String getNumero() {
         return numero;
