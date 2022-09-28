@@ -6,6 +6,16 @@ public class Conta {
 
     private double saldoCorrente;
 
+    private double ValorIncial;
+
+    public double getValorIncial() {
+        return ValorIncial;
+    }
+
+    public void setValorIncial(double valorIncial) {
+        ValorIncial = valorIncial;
+    }
+
     private Cliente cliente;
 
     private IEnviar enviar;
@@ -27,7 +37,7 @@ public class Conta {
 
     public double valorSacado(){
         double valorSacado = 0;
-        valorSacado = valorInicial() - getSaldoCorrente();
+        valorSacado = getValorIncial() - getSaldoCorrente();
         return valorSacado;
     }
 
