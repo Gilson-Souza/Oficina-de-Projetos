@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquina de Vendas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Maquina de Vendas</h1></header>
+    <div class="flex-container">
+        <div class="produtos flex-container">
+            <div class="prod ">
+                <div class="item-prod prod">
+                    <img src="" alt="foto do produto">
+                    <div>R$ Estoque:</div>    
+                </div>
+                <div class="item-prod prod">
+                    <img src="" alt="foto do produto">
+                    <div>R$ Estoque:</div>
+                </div>
+                <div class="item-prod prod">
+                    <img src="" alt="foto do produto">
+                    <div>R$ Estoque:</div>
+                </div>
+                <div class="item-prod prod">
+                    <img src="" alt="foto do produto">
+                    <div>R$ Estoque:</div>
+                </div>
+                <div class="item-prod prod">
+                    <img src="" alt="foto do produto">
+                    <div>R$ Estoque:</div>                    
+                </div>
+            </div>    
+        </div>
+            <div class="quantidade-produtos flex-container">
+                <div class="quant-produtos">
+                    <div class="item-selecionar quant-produtos">produto selecionado</div>
+                    <div class="item-quant quant-produtos">
+                        <button class="seta-cima" onclick="mais()"><img src="imagens/seta-cima.png" alt=""></button>
+                    </div>
+                    <div class="item-display quant-produtos">
+                        <div>
+                            
+                        </div>
+                    </div>
+                    <div class="item-quant quant-produtos">
+                     <button class="seta-baixo" onclick="menos()"><img src="imagens/seta-baixo.png" alt=""></button>
+                    </div>
+                    <div class="item-comprar quant-produtos">
+                        <button class="comprar" onclick="comprar()">comprar</button>
+                    </div>
+                </div>
+            </div>
+        <div class="saldo-deposito flex-container">
+                <div class="sal-dep">
+                        <div class="item-sal-text">Saldo</div>
+                        <div class="item-sal-tela"></div>
+                        <div class="item-sal-d"><h2>Depositar</h2></div>
+                        <div class="item-sal-b">
+                            <div class="botoes">
+                                <button class="bnt-click" name="botao" onclick="clicou(1)">1</button>
+                                <button class="bnt-click" name="botao" onclick="clicou(2)">2</button>
+                                <button class="bnt-click" name="botao" onclick="clicou(3)">3</button>
+                                <button class="bnt-click" name="botao" onclick="clicou(4)">4</button>
+                                <button class="bnt-click" name="botao" onclick="clicou(5)">5</button>
+                                <button class="bnt-click" name="botao" onclick="clicou(6)">6</button>
+                                <button class="bnt-click" name="botao" onclick="clicou(7)">7</button>
+                                <button class="bnt-click" name="botao" onclick="clicou(8)">8</button>
+                                <button class="bnt-click" name="botao" onclick="clicou(9)">9</button>
+                                <button class="bnt-click" id="excluir" onclick="excluir()"><=</button>
+                                <button class="bnt-click" name="botao" onclick="clicou(0)">0</button>
+                                <button class="bnt-click" id="confirmar" onclick="confirmar()">confirmar</button>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="item-sal">
+                                Retirar Dinheiro
+                            </button>
+                        </div>
+                </div>
+        </div>
+    </div>
+        <script src="produtos.js"></script>
+        <script src="script.js"></script>  
+</body>
+</html>
