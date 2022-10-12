@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Setter
 
 public class Mentoria extends Conteudo{
-    
+
 
     private static final double XP_PADRAO = 10d;
 
