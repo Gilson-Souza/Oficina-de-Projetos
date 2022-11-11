@@ -15,6 +15,8 @@ public class Conta {
 
 
 
+
+
     public Conta(String numero, int saldoCorrente, Cliente cliente) {
         this.numero = numero;
         this.saldoCorrente = saldoCorrente;
@@ -37,6 +39,12 @@ public class Conta {
         double contaAtualizada = 0;
         contaAtualizada = getSaldoCorrente();
         return contaAtualizada;
+    }
+
+    public void verficar(IEnviar enviar){
+
+        System.out.println("Testando para ver se funciona");
+
     }
 
     public void sacar(double valor) {

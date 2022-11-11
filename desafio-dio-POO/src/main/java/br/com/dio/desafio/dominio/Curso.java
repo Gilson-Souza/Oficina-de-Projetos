@@ -10,7 +10,7 @@ public class Curso extends Conteudo{
 
     public Curso() {
     }
-    private int cargaHoraria;
+    protected int cargaHoraria;
 
 
     @Override

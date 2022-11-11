@@ -1,5 +1,7 @@
 package org.example.dominio;
 
+
+
 public class EnviarWaths implements IEnviar{
 
 

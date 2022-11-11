@@ -8,9 +8,9 @@ public class Principal {
         //Conta conta = new Conta("245006-8", 2500);
         Cliente cliente = new Cliente("Gilson C Souza", "947799976");
         Conta conta = new Conta("12345-1", 2500, cliente);
-        IEnviar enviarEmail = new EnviarEmail();
-        IEnviar enviarWhats = new EnviarWaths();
-        IEnviar enviarSms = new EnviarSms();
+        EnviarEmail enviarEmail = new EnviarEmail();
+        EnviarWaths enviarWhats = new EnviarWaths();
+        EnviarSms enviarSms = new EnviarSms();
 
         conta.sacar(500);
         conta.sacar(250.50);
@@ -20,6 +20,7 @@ public class Principal {
         enviarEmail.disparar(conta);
         enviarWhats.disparar(conta);
         enviarSms.disparar(conta);
+
 
     }
 

@@ -12,7 +12,6 @@ public class Cliente{
     private Contrato contrato;
 
 
-
     public Cliente(String nome){
         this.nome = nome;
 

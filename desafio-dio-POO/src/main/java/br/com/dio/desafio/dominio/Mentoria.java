@@ -13,7 +13,7 @@ public class Mentoria extends Conteudo{
 
     private static final double XP_PADRAO = 10d;
 
-    private LocalDate data;
+    protected LocalDate data;
 
     @Override
     public double calcularXp() {
