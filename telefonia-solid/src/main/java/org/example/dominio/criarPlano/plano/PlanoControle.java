@@ -8,10 +8,7 @@ import lombok.Setter;
 
 public class PlanoControle extends Plano {
 
-    public PlanoControle(String nome, int ligacaoDDDGratis, int ligacaoDDIGratis, int linhaTelefonica) {
-        super(nome, ligacaoDDDGratis, ligacaoDDIGratis, linhaTelefonica);
 
-    }
 
     @Override
     public String toString() {

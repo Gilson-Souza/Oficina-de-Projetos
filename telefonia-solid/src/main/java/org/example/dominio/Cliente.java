@@ -10,6 +10,7 @@ public class Cliente{
 
     private String nome;
     private Contrato contrato;
+    private int linha;
 
 
     public Cliente(String nome){

@@ -1,7 +1,10 @@
 package org.example.dominio.util;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 public interface IConnection {
 
-    void getConnection();
+    Connection getConnection() throws ClassNotFoundException, SQLException;
 
 }

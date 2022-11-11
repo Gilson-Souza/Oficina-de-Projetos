@@ -1,11 +1,12 @@
-package org.example.dominio.persistencia;
+package org.example.dominio.persistencia.dao;
 
 import org.example.dominio.Uso;
-import org.example.dominio.connection.ExcecaoPersistencia;
+import org.example.dominio.util.connection.ExcecaoPersistencia;
+import org.example.dominio.persistencia.IDao;
 
 import java.util.List;
 
-public class UsoDAO implements IUsoDAO{
+public class UsoDAO implements IDao {
 
 
     @Override
@@ -17,5 +18,7 @@ public class UsoDAO implements IUsoDAO{
     public List<Uso> listarUso() {
         return null;
     }
+
+
 }
 

@@ -2,6 +2,7 @@ package org.example.dominio;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.example.dominio.criarPlano.IPlano;
 import org.example.dominio.criarPlano.plano.Plano;
 import org.example.dominio.criarPromocao.IPromocao;
 
@@ -11,11 +12,11 @@ import org.example.dominio.criarPromocao.IPromocao;
 public class Contrato {
 
     private Cliente cliente;
-    private Plano plano;
+    private IPlano plano;
     private IPromocao promocao;
     private Uso uso;
 
-    public Contrato(Cliente cliente, Plano plano, Uso uso) {
+    public Contrato(Cliente cliente, IPlano plano, Uso uso) {
         this.cliente = cliente;
         this.plano = plano;
         this.uso = uso;
