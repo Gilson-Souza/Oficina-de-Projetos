@@ -6,29 +6,30 @@ import org.example.dominio.criarPlano.IPlano;
 import org.example.dominio.criarPlano.plano.Plano;
 import org.example.dominio.criarPromocao.IPromocao;
 
+import java.util.List;
+
 @Getter
 @Setter
 
 public class Contrato {
 
     private Cliente cliente;
-    private IPlano plano;
-    private IPromocao promocao;
-    private Uso uso;
+    private List<IPromocao> promocao;
+    private List<LinhaTelefonica> linhas;
 
-    public Contrato(Cliente cliente, IPlano plano, Uso uso) {
+    public Contrato(Cliente cliente, List<LinhaTelefonica> linhas) {
         this.cliente = cliente;
-        this.plano = plano;
-        this.uso = uso;
+        this.linhas = linhas;
+
     }
 
-    public void contratarPromocao(IPromocao promocao){
+    public void contratarPromocao(List<IPromocao> promocao){
         this.promocao = promocao;
     }
 
     @Override
     public String toString() {
-        return " " + cliente + " " + plano + " " + uso;
+        return " " + cliente + " "  + linhas;
     }
 
 

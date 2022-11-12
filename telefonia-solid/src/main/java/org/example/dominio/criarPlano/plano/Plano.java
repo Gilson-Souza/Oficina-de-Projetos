@@ -12,6 +12,7 @@ public abstract class Plano {
     protected String nome;
     protected int ligacaoDDDGratis;
     protected int ligacaoDDIGratis;
+    protected int limiteInternet;
 
 
 }

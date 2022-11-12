@@ -14,5 +14,4 @@ public abstract class Calcular implements ICalcular {
     protected double valorPadraoDDI;
     protected double valorPadraoInternet;
 
-
 }

@@ -4,7 +4,9 @@ import org.example.dominio.Contrato;
 
 public interface IPromocao {
 
-    void alterarPlano(Contrato contrato);
+    void alterarPlanoPre(Contrato contrato);
+    void alterarPlanoPos(Contrato  contrato);
+    void alterarPlanoControle(Contrato contrato);
 
 
 }

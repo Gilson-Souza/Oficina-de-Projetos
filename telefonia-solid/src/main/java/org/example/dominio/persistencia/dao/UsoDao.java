@@ -6,7 +6,7 @@ import org.example.dominio.persistencia.IDao;
 
 import java.util.List;
 
-public class UsoDAO implements IDao {
+public class UsoDao implements IDao {
 
 
     @Override

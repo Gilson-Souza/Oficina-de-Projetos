@@ -11,8 +11,6 @@ public class PlanoPosPago extends Plano{
     private double valorPlano;
 
 
-
-
     @Override
     public String toString() {
         return "\nPlano: " + getNome();

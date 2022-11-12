@@ -9,9 +9,10 @@ import lombok.Setter;
 public class PlanoControle extends Plano {
 
 
-
     @Override
     public String toString() {
         return "\nPlano: " + getNome();
     }
+
+
 }
